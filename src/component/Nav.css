@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #121212; 
+    color: #fff;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000; /* Black navbar */
+    padding: 10px 20px;
+    border-bottom: 2px solid #333; /* Subtle bottom border */
+  }
+  
+  /* Logo Styling */
+  .logo-image {
+    height: 50px;
+  }
+  /* .nav2{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    
+  }
+  .nav2 li{
+    position: relative;
+    
+  }
+  .nav2 li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+
+  }
+  .nav2 li a:hover{
+    color: #f27a20;
+
+  } */
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f27a20; /* Orange hover effect */
+  }
+  
+  .dropdown {
+    font-size: 14px;
+    margin-left: 5px;
+    color: #f27a20; /* Orange '+' symbol */
+  }
+  
+  /* Call-to-Action Button */
+  .cta-button a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f27a20; /* Orange button */
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button a:hover {
+    background-color: #ff9147; /* Lighter orange hover effect */
+  }
+  
