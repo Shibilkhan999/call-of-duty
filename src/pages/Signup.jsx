@@ -203,7 +203,7 @@ const Signup = () => {
           alt="Call of Duty Logo"
           style={logoStyle}
         />
-        <h2 style={{ marginBottom: "10px" }}>Sign in to your Activision Account</h2>
+        <h2 style={{ marginBottom: "10px" }}>SIGN IN TO YOUR <br />ACTIVISION ACCOUNT</h2>
 
         <label>
           <input
@@ -244,7 +244,7 @@ const Signup = () => {
           onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#ff6a3d")}
           onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#ff4500")}
         >
-          Sign Up
+          SIGN UP
         </button>
         <ToastContainer/>
         <a
@@ -293,8 +293,7 @@ const Signup = () => {
             transition: 'color 0.3s ease', 
           }}
           onMouseOver={(e) => (e.currentTarget.style.color = '#d1d5db')} 
-          onMouseOut={(e) => (e.currentTarget.style.color = '#ffffff')} 
-        >
+          onMouseOut={(e) => (e.currentTarget.style.color = '#ffffff')} > 
           Login
         </span>
       </Link>

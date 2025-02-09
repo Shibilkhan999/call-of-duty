@@ -26,33 +26,9 @@ import {
   reauthenticateWithCredential,
   signOut,
 } from "firebase/auth";
-// import { GlobalContext } from './context/Context';
 import { useNavigate } from "react-router-dom";
 import { GlobalContext } from "../context/Context";
-// import { Link } from "react-router-dom";
 
-// import { getFirestore, addDoc, collection } from "firebase/firestore";
-// import { auth, db } from "../firebase/firebaseConfig";
-
-// import { app } from "./firebaseConfig"; // Assuming you have a firebaseConfig file
-
-
-// const db = getFirestore(app);
-
-// const addPost = async () => {
-//   try {
-//     const docRef = await addDoc(collection(db, "posts"), {
-//       caption: "Alan",
-//       authorName: "blex",
-//       authorProfile: "",
-//       postData: "",
-//     });
-
-//     console.log("Document written with ID: ", docRef.id);
-//   } catch (e) {
-//     console.error("Error adding document: ", e);
-//   }
-// };
  
  
 
@@ -87,9 +63,7 @@ const Profile = () => {
     setShowAlert(false);
   };
 
-  // const db = getFirestore(app);
-
-  // Modal Handler
+ 
   const handleOpenModal = (field) => {
     setEditField(field);
     setOpenModal(true);
@@ -225,7 +199,7 @@ const Profile = () => {
   POST
 </button>
 
-{/* Agar user login hai to Logout Button dikhaye */}
+
 {state?.isLogin === true ? (
   <button
     onClick={logoutUser}

@@ -4,8 +4,11 @@ import './App.css';
 import Navbar from './component/Nav';
 import CustomRoutes from './component/CustomRoutes';
 import {  useContext,useEffect } from 'react';
-import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { GlobalContext } from './context/Context';
+import Footer from "./pages/Footer";
+// import { initializeApp } from 'firebase/app';
+// import { getFirestore } from 'firebase/firestore';
 
 
 function App() {
@@ -93,6 +96,7 @@ function App() {
           : */}
       <Navbar />
       <CustomRoutes/>
+      <Footer />
     </div>
   );
 }

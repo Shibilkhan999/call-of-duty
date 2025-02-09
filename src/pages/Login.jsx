@@ -14,11 +14,23 @@ import { Link } from "react-router-dom"
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const [rememberMe, setRememberMe] = useState(false);
   
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
   const provider = new GithubAuthProvider();
   const facebookprovider = new FacebookAuthProvider();
+
+  // const handleRememberMeChange = () => {
+  //   setRememberMe(!rememberMe);
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Email:', email);
+  //   console.log('Password:', password);
+  //   console.log('Remember Me:', rememberMe);
+  // };
   
   
   const handleGoogleLogin = () => {
@@ -36,22 +48,21 @@ const Login = () => {
   const handleGithubLogin = () =>{
     signInWithPopup(auth, provider)
   .then((result) => {
-    // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+    
     const credential = GithubAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
 
-    // The signed-in user info.
     const user = result.user;
-    // IdP data available using getAdditionalUserInfo(result)
+    
     // ...
     console.log("User",user)
   }).catch((error) => {
-    // Handle Errors here.
+    
     const errorCode = error.code;
     const errorMessage = error.message;
-    // The email of the user's account used.
+    
     const email = error.customData.email;
-    // The AuthCredential type that was used.
+    
     const credential = GithubAuthProvider.credentialFromError(error);
     // ...
     console.log("Error",error)
@@ -61,15 +72,9 @@ const Login = () => {
   const handleFacebookLogin =  () => {
     signInWithPopup(auth, facebookprovider)
   .then((result) => {
-    // The signed-in user info.
     const user = result.user;
-
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
     const credential = FacebookAuthProvider.credentialFromResult(result);
     const accessToken = credential.accessToken;
-
-    // IdP data available using getAdditionalUserInfo(result)
-    // ...
     console.log("User",user)
   })
   .catch((error) => {
@@ -121,17 +126,6 @@ const Login = () => {
   };
 
 
-  // const [rememberMe, setRememberMe] = useState(false);
-
-  // const handleRememberMeChange = () => {
-  //   setRememberMe(!rememberMe);
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-    
-  //   console.log('Remember Me:', rememberMe);
-  // };
 
 
   const iconStyle = {
@@ -225,9 +219,11 @@ const Login = () => {
     textDecoration: "none",
     marginTop: "10px",
     fontSize: "14px",
-    display: "block",
+    display: "flex",
+    justifyContent:"center",
+    // alignItems: "center",
     cursor: "pointer",
-    marginLeft:"220px",
+    // marginLeft:"160px", 
   };
 
 
@@ -241,7 +237,7 @@ const Login = () => {
           alt="Call of Duty Logo"
           style={logoStyle}
         />
-        <h2 style={{ marginBottom: "10px" }}>Login to your Activision Account</h2>
+        <h2 style={{ marginBottom: "10px" }}>LOGIN TO YOUR <br />ACTIVISION ACCOUNT</h2>
 
         <label>
           <input
@@ -266,25 +262,17 @@ const Login = () => {
         </label>
 
 
-        <p
-          style={linkStyle}
-          onClick={handleForgotPassword}
-          onMouseOver={(e) => (e.currentTarget.style.color = "#fff")}
-          onMouseOut={(e) => (e.currentTarget.style.color = "#bbb")}
-          
-        >
-          Forgot password?
-        </p>
 
-
-        {/* <label>
-          <input
-            type="checkbox"
-            checked={rememberMe}
-            onChange={handleRememberMeChange}
-          />
-          Remember Me
-        </label> */}
+       {/* <div>
+        <label>
+        <input
+        type="checkbox"
+        checked={rememberMe}
+        onChange={handleRememberMeChange}
+        />
+        Remember Me
+        </label>
+        </div> */}
 
 
         <button
@@ -293,12 +281,19 @@ const Login = () => {
           onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#ff6a3d")}
           onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#ff4500")}
         >
-          Login
+          LOGIN
         </button>
-        {/* <ToastContainer /> */}
         
+        <p
+          style={linkStyle}
+          onClick={handleForgotPassword}
+          onMouseOver={(e) => (e.currentTarget.style.color = "#fff")}
+          onMouseOut={(e) => (e.currentTarget.style.color = "#bbb")}
+          >
+          Forgot password?
+        </p>
         <div className='flex items-center justify-center mt-5 text-white-500'>
-        <p style={{ margin: "15px 0", color: "#bbb" }}>Or</p>
+        <p style={{ margin: "15px 0", color: "#bbb" }}>OR</p>
         </div>
 
 
