@@ -28,9 +28,9 @@ const Signup = () => {
 
           sendEmailVerification(auth.currentUser)
           .then(() => {
-          // Email verification sent!
+          
           console.log("Email verification sent!")
-          // ...
+          
           })
           .catch(() => {
             console.log("verification not sent")
@@ -38,12 +38,10 @@ const Signup = () => {
           })
 
           console.log("profile update" )
-          // Profile updated!
-          // ...
+          
         }).catch((error) => {
           console.log("update profile",error)
-          // An error occurred
-          // ...
+          
         });
         console.log("Res",user)
       })
@@ -78,9 +76,9 @@ const Signup = () => {
 
           const errorCode = error.code;
             const errorMessage = error.message;
-            // The email of the user's account used.
+            
             const email = error.customData.email;
-            // The AuthCredential type that was used.
+            
             const credential = GithubAuthProvider.credentialFromError(error);
 
           console.log("GitHub Login Error:", error);
@@ -92,27 +90,25 @@ const Signup = () => {
      const handleFacebookLogin =  () => {
         signInWithPopup(auth, facebookprovider)
       .then((result) => {
-        // The signed-in user info.
+       
         const user = result.user;
     
-        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         const credential = FacebookAuthProvider.credentialFromResult(result);
         const accessToken = credential.accessToken;
     
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
+       
         console.log("User",user)
       })
       .catch((error) => {
-        // Handle Errors here.
+        
         const errorCode = error.code;
         const errorMessage = error.message;
-        // The email of the user's account used.
+        
         const email = error.customData.email;
-        // The AuthCredential type that was used.
+        
         const credential = FacebookAuthProvider.credentialFromError(error);
     
-        // ...
+       
         console.log("Error",error)
       });}
 

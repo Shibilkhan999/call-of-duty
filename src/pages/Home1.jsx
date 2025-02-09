@@ -166,10 +166,10 @@ const Profile = () => {
   const navigate = useNavigate();
    const logoutUser = () => {
       signOut(auth).then(() => {
-        // Sign-out successful.
+        
         console.log("Sign-out successful")
       }).catch((error) => {
-        // An error happened.
+        
         console.log("An error happened",error)
       });
     }
@@ -185,10 +185,10 @@ const Profile = () => {
     borderRadius: "8px",
     cursor: "pointer",
     fontSize: "20px",
-    // fontWeight: "bold",
+    
     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
     transition: "all 0.3s ease",
-    // textTransform: "uppercase",
+    
     letterSpacing: "1px",
     marginTop: "20px",
   }}
@@ -211,7 +211,7 @@ const Profile = () => {
       borderRadius: "8px",
       cursor: "pointer",
       fontSize: "16px",
-    //   fontWeight: "bold",
+   
       boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
       transition: "all 0.3s ease",
       textTransform: "uppercase",

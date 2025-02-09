@@ -78,12 +78,12 @@ const Login = () => {
     console.log("User",user)
   })
   .catch((error) => {
-    // Handle Errors here.
+    
     const errorCode = error.code;
     const errorMessage = error.message;
-    // The email of the user's account used.
+    
     const email = error.customData.email;
-    // The AuthCredential type that was used.
+    
     const credential = FacebookAuthProvider.credentialFromError(error);
 
     // ...
@@ -101,7 +101,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log("Err", error);
-        // const errorCode = error.code;
+        
         const errorMessage = error.message;
         alert(errorMessage); 
       });
@@ -118,7 +118,7 @@ const Login = () => {
         })
         .catch((error) => {
           console.log("Err", error);
-          // const errorCode = error.code;
+          
           const errorMessage = error.message;
           alert(errorMessage);
         });
@@ -198,21 +198,7 @@ const Login = () => {
     marginTop: "15px",
   };
 
-  // const socialButtonStyle = {
-  //   width: "100%",
-  //   padding: "10px",
-  //   fontSize: "16px",
-  //   fontWeight: "bold",
-  //   color: "#fff",
-  //   backgroundColor: "#333",
-  //   border: "none",
-  //   borderRadius: "5px",
-  //   cursor: "pointer",
-  //   marginTop: "10px",
-  //   display: "flex",
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  // };
+  
 
   const linkStyle = {
     color: "#bbb",
@@ -221,9 +207,8 @@ const Login = () => {
     fontSize: "14px",
     display: "flex",
     justifyContent:"center",
-    // alignItems: "center",
     cursor: "pointer",
-    // marginLeft:"160px", 
+    
   };
 
 
@@ -297,41 +282,7 @@ const Login = () => {
         </div>
 
 
-       
 
-        {/* <div className="flex items-center justify-center mt-5 text-white-500">
-        <div className="border-[1px] w-[200px] border-white-300 mr-1" />
-        OR
-        <div className="border-[1px] w-[200px] border-white-300 ml-1"></div>
-      </div> */}
-        {/* <button
-          type="button"
-          style={socialButtonStyle}
-          onClick={handleGoogleLogin}
-          onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#555")}
-          onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#333")}
-        >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
-            alt="Google Logo"
-            style={{ width: "20px", marginRight: "10px" }}
-          />
-          
-        </button>
-        <button
-          type="button"
-          style={socialButtonStyle}
-          onClick={handleGithubLogin}
-          onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#555")}
-          onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#333")}
-        >
-          <img
-            src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_640.png"
-            alt="GitHub Logo"
-            style={{ width: "20px", marginRight: "10px" }}
-          />
-          
-        </button> */}
 
         <div>
         <img
@@ -359,14 +310,7 @@ const Login = () => {
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
       />
-       {/* <img 
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCwB6WHUfAkz72VnAyoDo5dU29LMfXK3VeKQ&s"
-        alt="Phonenumber Logo"
-        style={iconStyle}
-        // onClick={handleFacebookLogin}
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
-      /> */}
+      
       </div>
 
 

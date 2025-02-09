@@ -17,11 +17,9 @@ import Input from '@mui/joy/Input';
 import Link from '@mui/joy/Link';
 import MoreHoriz from '@mui/icons-material/MoreHoriz';
 import Face from '@mui/icons-material/Face';
-// import { eachItem } from 'ajv/dist/compile/util';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Swal from 'sweetalert2';
-// import  db  from 'firebase/firestore'; 
-// import { db } from 'firebase/firestore';
+
 
 const Home2 = () => {
     const [posts, setPosts] = useState([]); 
@@ -108,43 +106,6 @@ const Home2 = () => {
     const deletePost = async (id) => {
         await deleteDoc(doc(db, "posts", id));
         // setPosts(posts.filter(post => post.id !== id)); 
-        
-
-
-
-
-        // Swal.fire({
-        //     title: "Do you want delete this post?",
-        //     icon: "warning",
-        //     showCancelButton: true,
-        //     confirmButtonText: "Delete",
-        //   }).then((result) => {
-        //     /* Read more about isConfirmed, isDenied below */
-        //     if (result.isConfirmed) {
-        //       deletePost(posts.id)
-              
-        //     }
-        //   });
-
-
-        // Swal.fire({
-        //     title: "Are you sure?",
-        //     text: "You won't be able to revert this!",
-        //     icon: "warning",
-        //     showCancelButton: true,
-        //     confirmButtonColor: "#3085d6",
-        //     cancelButtonColor: "#d33",
-        //     confirmButtonText: "Yes, delete it!"
-        //   }).then((result) => {
-        //     if (result.isConfirmed) {
-        //         deletePost(posts.id)
-        //       Swal.fire({
-        //         title: "Deleted!",
-        //         text: "Your file has been deleted.",
-        //         icon: "success"
-        //       });
-        //     }
-        //   });
     };
 
 
@@ -221,12 +182,12 @@ const Home2 = () => {
         border: "none",
         cursor: "pointer",
         outline: "none",
-        transition: "background 0.3s ease", // Smooth transition for hover effect
+        transition: "background 0.3s ease", 
     }}
-    onMouseOver={(e) => (e.target.style.background = "#e65c00")} // Hover effect
-    onMouseOut={(e) => (e.target.style.background = "#ff6b00")} // Reset on mouse out
-    onMouseDown={(e) => (e.target.style.background = "#cc5200")} // Active effect
-    onMouseUp={(e) => (e.target.style.background = "#ff6b00")} // Reset on mouse up
+    onMouseOver={(e) => (e.target.style.background = "#e65c00")} 
+    onMouseOut={(e) => (e.target.style.background = "#ff6b00")} 
+    onMouseDown={(e) => (e.target.style.background = "#cc5200")} 
+    onMouseUp={(e) => (e.target.style.background = "#ff6b00")}  
 >
     Post
 </button>
@@ -384,7 +345,7 @@ const Home2 = () => {
 
 Swal.fire({
     title: "DO YOU WANT DELETE THIS POST?",
-    // text: "You won't be able to revert this!",
+   
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#d33",
