@@ -1,0 +1,24 @@
+/* Custom Modal Styling */
+.modal-title {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 16px; /* Padding */
+    text-align: center; /* Center text */
+  }
+  
+  /* Custom Button Styling */
+  .MuiButton-containedPrimary {
+    background-color: #ff6f61; /* Custom primary button color */
+  }
+  
+  .MuiButton-containedPrimary:hover {
+    background-color: #ff4a3d; /* Darker shade on hover */
+  }
+  
+  .MuiButton-containedSecondary {
+    background-color: #6c757d; /* Custom secondary button color */
+  }
+  
+  .MuiButton-containedSecondary:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+  }

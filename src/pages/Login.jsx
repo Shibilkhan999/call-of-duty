@@ -105,7 +105,7 @@ const Login = () => {
         const errorMessage = error.message;
         alert(errorMessage); 
       });
-  };
+  }; 
 
 
 

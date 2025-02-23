@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer style={styles.footer}>
-      {/* Top Links */}
+      {/* Top Links */} 
       <div style={styles.footerLinks}>
         <a href="#" style={styles.link}>LEGAL</a>
         <span style={styles.separator}>|</span>
@@ -37,11 +37,11 @@ const Footer = () => {
           <img src="https://www.esrb.org/wp-content/uploads/2019/04/Mature.svg" alt="Rating" style={styles.esrbImage} />
         </div>
         <p style={styles.copyright}>
-          © 2024 Activision Publishing, Inc. ACTIVISION, CALL OF DUTY, CALL OF DUTY LEAGUE, MODERN WARFARE, CALL OF DUTY BLACK OPS, CALL OF DUTY WARZONE, and CALL OF DUTY VANGUARD are trademarks of Activision Publishing, Inc.
+          © 2025 Activision Publishing, Inc. ACTIVISION, CALL OF DUTY, CALL OF DUTY LEAGUE, MODERN WARFARE, CALL OF DUTY BLACK OPS, CALL OF DUTY WARZONE, and CALL OF DUTY VANGUARD are trademarks of Activision Publishing, Inc.
           <br />
           All other trademarks and trade names are the property of their respective owners.
           <br /><br />
-          © 2024 Compass International Pictures, Inc. All Rights Reserved.
+          © 2025 Compass International Pictures, Inc. All Rights Reserved.
         </p>
         <button style={styles.cookieBtn}>COOKIE SETTINGS</button>
       </div>

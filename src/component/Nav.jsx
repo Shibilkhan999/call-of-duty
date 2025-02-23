@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">
+      <div className="logo">  
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Call_of_Duty_2023_logo.svg"
           alt="Call of Duty Logo"
@@ -38,16 +38,28 @@ const Navbar = () => {
           <li><a href="#" onClick={toggleMenu}>XBOX GAME PASS</a></li>
           <li><Link to={"/signup"} onClick={toggleMenu}>SIGNUP</Link></li>
           <li><Link to={"/login"} onClick={toggleMenu}>LOGIN</Link></li>
+          {/* <li><Link to={"/logout"} onClick={toggleMenu}>Logout</Link></li> */}
         </ul>
       </div>
       
       <div className="cta-button">
         <a href="#">GET BLACK OPS 6</a>
       </div>
+      {/* <div className="cta-button" onClick={logoutUser}>
+        <a href="#">LOGOUT</a>
+      </div> */}
+
     </nav>
+    
   );
+  
 };
 
+
+
 export default Navbar;
+
+
+
 
 

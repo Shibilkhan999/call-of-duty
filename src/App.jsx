@@ -7,6 +7,7 @@ import {  useContext,useEffect } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { GlobalContext } from './context/Context';
 import Footer from "./pages/Footer";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
